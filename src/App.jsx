@@ -11,11 +11,14 @@ function App() {
 			<main>
 				<h1> Våra böcker </h1>
 				<div className="book-grid">
-					<BookCard book={books[0]} />
+					{books.map(b => (
+						<BookCard key={b.id} book={b} />
+					))}
+					{/* <BookCard book={books[0]} />
 					<BookCard book={books[1]} hasBorrowed={true} />
 					<BookCard book={books[2]} />
 					<BookCard book={books[3]} />
-					<BookCard book={books[4]} />
+					<BookCard book={books[4]} /> */}
 
 				</div>
 			</main>
