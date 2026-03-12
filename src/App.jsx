@@ -1,4 +1,6 @@
 import './App.css'
+import BookCard from './BookCard.jsx'
+import { books } from './data.js'
 
 function App() {
 	return (
@@ -9,36 +11,12 @@ function App() {
 			<main>
 				<h1> Våra böcker </h1>
 				<div className="book-grid">
-					<div className="card">
-						<h3> Bokens titel </h3>
-						<img alt="bild" />
-						<p> Författare </p>
-						<button> Låna </button>
-					</div>
-					<div className="card">
-						<h3> Bokens titel </h3>
-						<img alt="bild" />
-						<p> Författare </p>
-						<button className="return"> Återlämna </button>
-					</div>
-					<div className="card">
-						<h3> Bokens titel </h3>
-						<img alt="bild" />
-						<p> Författare </p>
-						<button> Låna </button>
-					</div>
-					<div className="card">
-						<h3> Bokens titel </h3>
-						<img alt="bild" />
-						<p> Författare </p>
-						<button> Låna </button>
-					</div>
-					<div className="card">
-						<h3> Bokens titel </h3>
-						<img alt="bild" />
-						<p> Författare </p>
-						<button> Låna </button>
-					</div>
+					<BookCard book={books[0]} />
+					<BookCard book={books[1]} hasBorrowed={true} />
+					<BookCard book={books[2]} />
+					<BookCard book={books[3]} />
+					<BookCard book={books[4]} />
+
 				</div>
 			</main>
 			<footer>
